@@ -1,4 +1,3 @@
-# shortener/models.py
 from django.db import models
 from django.utils import timezone
 import shortuuid
@@ -27,4 +26,5 @@ class URLStats(models.Model):
     country = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
+
         return f"Click on {self.short_url.short_code} at {self.clicked_at}"
